@@ -1,6 +1,8 @@
 # Create by Thxb35 :)
 # A small script gathering the most powerful Steganography software.
 
+import os
+
 print("###############################################################");
 print("");
 print(" $$$$$$\    $$\                          $$$$$$\  $$\ $$\ ");
@@ -20,3 +22,22 @@ print("###############################################################");
 
 
 path = input("Please enter the absolute path of the image to be analyzed ");
+
+print("1. Display the picture")
+print("2. Analyze the picture")
+
+print("")
+option = input("Select an option : ")
+print("")
+
+#We display the picture
+if option == "1":
+    os.system("ristretto " + path)
+
+elif option == "2":
+    print("Exiftool : ")
+    print("")
+    os.system("exiftool " + path + " | grep File")
+    os.system("exiftool " + path + " | grep MIME")
+    os.system("exiftool " + path + " | grep Encoding")
+        os.system("exiftool " + path + " | grep Thumbnail")
