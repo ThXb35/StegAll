@@ -30,6 +30,7 @@ print("3. Analyze the picture with a password")
 print("4. Analyze the picture with a text to search")
 print("5. Apply color filters to the picture")
 print("6. Display the binary and hexadecimal of the picture")
+print("7. Use Stegoveritas")
 
 
 
@@ -104,3 +105,7 @@ elif option == "5":
 elif option == "6":
 
     os.system("ghex " + path)
+
+elif option == "7":
+    
+    os.system("cd /home/$USER/.local && stegoveritas " + path)
